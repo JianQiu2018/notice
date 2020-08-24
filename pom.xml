@@ -20,6 +20,39 @@
     </properties>
 
     <dependencies>
+        <!--TCC分布式事务-->
+        <dependency>
+            <groupId>org.bytesoft</groupId>
+            <artifactId>bytetcc-supports-springcloud</artifactId>
+            <version>0.5.9</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-zookeeper-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-zookeeper-discovery</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.netflix.eureka</groupId>
+                    <artifactId>eureka-client</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-consul-discovery</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
